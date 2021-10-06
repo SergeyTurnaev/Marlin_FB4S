@@ -115,8 +115,8 @@
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                          PC1   // TH1
-#define TEMP_1_PIN                          PC2   // TH2
+#define TEMP_0_PIN                          PC2   // TH1
+#define TEMP_1_PIN                          PC1   // TH2
 #define TEMP_BED_PIN                        PC0   // TB1
 
 //
@@ -126,8 +126,8 @@
 #define HEATER_1_PIN                        PB0   // HEATER2
 #define HEATER_BED_PIN                      PA0   // HOT BED
 
-#define FAN_PIN                             PB1  // NOZZLE FAN
-#define FAN1_PIN                            PB0  // HEATSINK FAN
+#define FAN_PIN                             PB0  // NOZZLE FAN
+#define FAN1_PIN                            PB1  // HEATSINK FAN
 //
 // Thermocouples
 //
