@@ -936,7 +936,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 5000, 5000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 1500, 1500, 100, 10000 }
 
 #define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -953,7 +953,7 @@
  */
 #define DEFAULT_ACCELERATION          1500    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  10000    // E acceleration for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   1500    // X, Y, Z acceleration for travel (non printing) moves
 
 /**
  * Default Jerk limits (mm/s)
@@ -965,8 +965,8 @@
  */
 #define CLASSIC_JERK
 #if ENABLED(CLASSIC_JERK)
-  #define DEFAULT_XJERK 20.0
-  #define DEFAULT_YJERK 20.0
+  #define DEFAULT_XJERK 10.0
+  #define DEFAULT_YJERK 10.0
   #define DEFAULT_ZJERK  0.5
   //#define DEFAULT_IJERK  0.3
   //#define DEFAULT_JJERK  0.3
@@ -976,7 +976,7 @@
 
   #define LIMITED_JERK_EDITING        // Limit edit via M205 or LCD to DEFAULT_aJERK * 2
   #if ENABLED(LIMITED_JERK_EDITING)
-    #define MAX_JERK_EDIT_VALUES { 40, 40, 2, 30 } // ...or, set your own edit limits
+    #define MAX_JERK_EDIT_VALUES { 30, 30, 2, 30 } // ...or, set your own edit limits
   #endif
 #endif
 
@@ -2859,7 +2859,7 @@ EEPROM_W25Q
 //#define NUM_M106_FANS 1
 
 // Increase the FAN PWM frequency. Removes the PWM noise but increases heating in the FET/Arduino
-//#define FAST_PWM_FAN
+#define FAST_PWM_FAN
 
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
